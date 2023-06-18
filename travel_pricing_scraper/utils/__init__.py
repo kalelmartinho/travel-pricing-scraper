@@ -15,5 +15,5 @@ def date_plus_hours(date_var: date, hours: str) -> datetime:
         >>> date_plus_hours(date(2021, 1, 1), '12:00')
         datetime.datetime(2021, 1, 1, 12, 0)
     """
-    hours = hours + ':00'
+    hours = hours[:5] + ':00'
     return datetime.fromisoformat(f'{date_var}T{hours}')
