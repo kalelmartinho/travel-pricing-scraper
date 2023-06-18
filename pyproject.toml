@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "travel-pricing-scraper"
+version = "0.1.0"
+description = ""
+authors = ["Kalel L. Martinho <kalel@tutamail.com>"]
+readme = "README.md"
+packages = [{include = "travel_pricing_scraper"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
