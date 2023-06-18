@@ -1,0 +1,14 @@
+site_name: Travel Pricing
+repo_url: https://github.com/kalelmartinho/travel-pricing-scraper
+repo_name: kalelmartinho/travel-pricing-scraper
+edit_uri: tree/master/docs/
+
+theme:
+  name: material
+  language: pt-BR
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
