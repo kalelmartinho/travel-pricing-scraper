@@ -35,7 +35,7 @@ addopts = "--doctest-modules"
 profile = "black"
 line_length = 79
 
-[tool.taskpy.tasks]
+[tool.taskipy.tasks]
 lint = "blue --check --diff . && isort --check --diff ."
 docs = "mkdocs serve"
 pre_test = "task lint"
