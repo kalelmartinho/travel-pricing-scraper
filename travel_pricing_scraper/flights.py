@@ -25,12 +25,16 @@ def flights(
         list: List of flight prices.
 
     Raises:
-        ValueError: If origin, destination, or date is invalid.
+        ValueError: If date is not in YYYY-MM-DD format (iso format).
 
     Examples:
         >>> flights('CWB', 'POA', '{}'.format(now_isoformat))
         [...]
     """   # doctest: +ELLIPSIS
+
+    if not (date[4] == '-' and date[7] == '-' and len(date) == 10):
+        raise ValueError('Date must be in YYYY-MM-DD format (iso format).')
+
     if not asyncio.get_event_loop().is_running():
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
