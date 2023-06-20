@@ -16,6 +16,7 @@ class Flight(BaseModel):
     departure_date: dt | str
     arrive_date: dt | str
     price: float
+    carrier: str
 
     @validator('price')
     def price_must_be_positive(cls, v):
