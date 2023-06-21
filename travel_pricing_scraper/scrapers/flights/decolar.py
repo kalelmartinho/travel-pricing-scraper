@@ -14,7 +14,7 @@ async def decolar_flights(origin, destination, flight_date, passengers=1):
 
     flights = []
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False, slow_mo=0.5)
+        browser = await p.chromium.launch(headless=True, slow_mo=0.5)
         page = await browser.new_page()
         await page.goto(
             'https://www.decolar.com/passagens-aereas/',
