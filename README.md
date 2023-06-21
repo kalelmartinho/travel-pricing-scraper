@@ -1,7 +1,7 @@
 # Travel Pricing Scraper
 
 [![Documentation Status](https://readthedocs.org/projects/travel-pricing-scraper/badge/?version=latest)](https://travel-pricing-scraper.readthedocs.io/en/latest/?badge=latest)
-[![CI](https://github.com/kalelmartinho/travel-pricing-scraper/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/kalelmartinho/travel-pricing-scraper/actions/workflows/pipeline.yaml)
+[![CI](https://github.com/kalelmartinho/travel-pricing-scraper/actions/workflows/pipeline.yml/badge.svg)](https://github.com/kalelmartinho/travel-pricing-scraper/actions/workflows/pipeline.yml)
 
 ## Introduction
 
