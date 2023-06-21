@@ -19,7 +19,7 @@ async def decolar_flights(origin, destination, flight_date, passengers=1):
         await page.goto(
             'https://www.decolar.com/passagens-aereas/',
             wait_until='load',
-            timeout=60000,
+            timeout=120000,
         )
         await page.get_by_role('emphasis').filter(
             has_text='Não quero benefícios'
@@ -37,12 +37,12 @@ async def decolar_flights(origin, destination, flight_date, passengers=1):
         await origin_input.click()
         await origin_input.clear()
         await origin_input.type(origin)
-        await page.wait_for_timeout(1500)
+        await page.wait_for_timeout(10000)
         await origin_input.press('Enter')
-        await page.wait_for_timeout(500)
+        await page.wait_for_timeout(10000)
         await dest_input.click()
         await dest_input.type(destination, delay=100)
-        await page.wait_for_timeout(1500)
+        await page.wait_for_timeout(10000)
         await dest_input.press('Enter')
         await date_input.click()
         standard_date = await page.locator(
@@ -64,15 +64,13 @@ async def decolar_flights(origin, destination, flight_date, passengers=1):
             )
 
         await page.get_by_text(str(flight_date.day), exact=True).first.click()
-        await page.wait_for_timeout(500)
+        await page.wait_for_timeout(10000)
         await submit.click()
         await page.wait_for_load_state()
         await page.get_by_role('emphasis').filter(
             has_text='Não quero benefícios'
         ).click()
-
-        # await page.wait_for_timeout(3000)
-        await page.wait_for_selector(cluster_css)
+        await page.wait_for_selector(cluster_css, timeout=120000)
         clusters = await page.locator(cluster_css).all()
         for cluster in clusters:
             rows = await cluster.locator(rows_locator).all()
@@ -101,7 +99,3 @@ async def decolar_flights(origin, destination, flight_date, passengers=1):
                 flights.append(flight)
 
     return flights
-
-
-if __name__ == '__main__':
-    print(decolar_flights('CWB', 'POA', '2023-07-08', 1))
