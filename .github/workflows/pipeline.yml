@@ -16,3 +16,7 @@ jobs:
       - name: Poetry Install
         run: pip install poetry
           
+      - name: Install Dependencies
+        run: |
+          poetry install --without doc
+          playwright install
