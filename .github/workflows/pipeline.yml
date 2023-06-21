@@ -1,6 +1,8 @@
 name: Pipeline
 on: [push, pull_request]
 
+
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -26,3 +28,9 @@ jobs:
 
       - name: Run Tests
         run: poetry run task test
+
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
