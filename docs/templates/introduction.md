@@ -1,0 +1,5 @@
+## Introduction
+
+The objective of this project is to demonstrate my skills in writing scalable, well-documented, and tested code. For this purpose, i've used Playwright as a web scraping tool to fetch airfare prices. While there are more specialized approaches to extract data of this kind, the main emphasis here is to showcase the ability to develop high-quality code using Playwright. 
+
+In this project, Playwright is used to navigate through different airline websites, fill in search forms, click buttons, and extract price information. It is important to note that in a real production environment, specific solutions would need to be considered for scraping airfare data. However, this project serves as a basic example of my skills in developing scalable, well-documented, and tested code, using Playwright as a widely documented and tested web scraping tool.
