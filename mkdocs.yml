@@ -34,7 +34,7 @@ plugins:
 
 extra:
   commands:
-    run: poetry run travels
+    run: travels
   vars:
     project: travel_pricing_scraper
     origin: CWB
