@@ -19,4 +19,4 @@ jobs:
       - name: Install Dependencies
         run: |
           poetry install --without doc
-          playwright install
+          poetry run playwright install
