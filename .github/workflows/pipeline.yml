@@ -27,7 +27,7 @@ jobs:
           poetry run playwright install
 
       - name: Run Tests
-        run: poetry run task test
+        run: poetry run task test --cov-report=xml
 
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
