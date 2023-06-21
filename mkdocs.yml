@@ -9,7 +9,16 @@ theme:
 
 markdown_extensions:
   - attr_list
-
+  - admonition
+  - pymdownx.tasklist
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 extra_css:
   - stylesheets/extra.css
 
@@ -17,7 +26,23 @@ watch:
   - travel_pricing_scraper
 
 plugins:
+- macros
 - mkdocstrings:
     handlers:
       python:
         paths: [travel_pricing_scraper]
+
+extra:
+  commands:
+    run: poetry run travels
+  vars:
+    project: travel_pricing_scraper
+    origin: CWB
+    destination: POA
+    flight_date: 2023-08-01
+  version: 0.1.0
+  date: 2022-06-21
+  description: "A scraper to get travel pricing from different websites."
+  authors: "Kalel Martinho Rodrigues"
+  license: "MIT"
+  repository: "https://github.com/kalelmartinho/travel-pricing-scraper"
