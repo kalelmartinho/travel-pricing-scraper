@@ -1,10 +1,22 @@
 [tool.poetry]
 name = "travel-pricing-scraper"
 version = "0.1.0"
-description = ""
+description = "In this project, Playwright is used to navigate through different airline websites, fill in search forms, click buttons, and extract price information. "
 authors = ["Kalel L. Martinho <kalel@tutamail.com>"]
+license = "BeerWare"
 readme = "README.md"
 packages = [{include = "travel_pricing_scraper"}]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Education",
+    "Environment :: Console",
+    "Development Status :: 5 - Production/Stable"
+]
+
+[tool.poetry.yrls]
+"Docs" = "https://travel-pricing-scraper.readthedocs.io/en/latest/"
+"Code" = "https://github.com/kalelmartinho/travel-pricing-scraper"
+"Bug Tracker" = "https://github.com/kalelmartinho/travel-pricing-scraper/issues"
 
 [tool.poetry.scripts]
 travels = "travel_pricing_scraper.cli:app"
@@ -38,6 +50,7 @@ jinja2 = "^3.1.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
 
 [tool.pytest.ini_options]
 pythonpath = "."
