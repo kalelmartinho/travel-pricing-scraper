@@ -20,3 +20,6 @@ jobs:
         run: |
           poetry install --without doc
           poetry run playwright install
+
+      - name: Run Tests
+        run: poetry run task test
