@@ -43,7 +43,7 @@ class Flight(BaseModel):
             return dt.fromisoformat(v)
         return v
     
-    @validator('price')
+    @validator('price', pre=True)
     def brl_to_float(cls, v):
         """Converts BRL string to float.
         >>> Flight(id=uuid.UUID('50b5e710-db51-424c-b052-8383635ad39d'), origin='CWB', destination='POA', departure_date=dt(2021, 7, 8, 0, 0), arrive_date=dt(2021, 7, 10, 0, 0), price='100,00', carrier='GOL')
