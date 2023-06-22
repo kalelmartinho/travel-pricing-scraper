@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "travel-pricing-scraper"
-version = "0.1.1"
+version = "0.1.2"
 description = "In this project, Playwright is used to navigate through different airline websites, fill in search forms, click buttons, and extract price information. "
 authors = ["Kalel L. Martinho <kalel@tutamail.com>"]
 license = "BeerWare"
