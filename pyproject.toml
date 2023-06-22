@@ -13,7 +13,7 @@ classifiers = [
     "Development Status :: 5 - Production/Stable"
 ]
 
-[tool.poetry.yrls]
+[tool.poetry.urls]
 "Docs" = "https://travel-pricing-scraper.readthedocs.io/en/latest/"
 "Code" = "https://github.com/kalelmartinho/travel-pricing-scraper"
 "Bug Tracker" = "https://github.com/kalelmartinho/travel-pricing-scraper/issues"
