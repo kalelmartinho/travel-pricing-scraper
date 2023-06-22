@@ -2,7 +2,7 @@
 
 [![Documentation Status](https://readthedocs.org/projects/travel-pricing-scraper/badge/?version=latest)](https://travel-pricing-scraper.readthedocs.io/en/latest/?badge=latest)
 [![CI](https://github.com/kalelmartinho/travel-pricing-scraper/actions/workflows/pipeline.yml/badge.svg)](https://github.com/kalelmartinho/travel-pricing-scraper/actions/workflows/pipeline.yml)
-
+[![PyPI version](https://badge.fury.io/py/travel-pricing-scraper.svg)](https://badge.fury.io/py/travel-pricing-scraper)
 ## Introduction
 
 The objective of this project is to demonstrate my skills in writing scalable, well-documented, and tested code. For this purpose, i've used Playwright as a web scraping tool to fetch airfare prices. While there are more specialized approaches to extract data of this kind, the main emphasis here is to showcase the ability to develop high-quality code using Playwright. 
@@ -37,7 +37,7 @@ playwright install
 You can use scraper via command line. For example:
 
 ```bash
-travel-pricing-scraper travels
+travels
 ```
 Options
 ```
@@ -48,7 +48,7 @@ Date in YYYY-MM-DD format (iso format): 2023-08-01
 
 OR with arguments:
 ```bash
-travel-pricing-scraper  --origin CWB --destination POA --date "2023-08-01"
+travels --origin CWB --destination POA --date "2023-08-01"
 ```
 
 Returns:
