@@ -42,7 +42,7 @@ class Flight(BaseModel):
         if isinstance(v, str):
             return dt.fromisoformat(v)
         return v
-    
+
     @validator('price', pre=True)
     def brl_to_float(cls, v):
         """Converts BRL string to float.
