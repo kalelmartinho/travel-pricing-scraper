@@ -32,6 +32,9 @@ def flights(
         [...]
     """   # doctest: +ELLIPSIS
 
+    origin = origin.upper()
+    destination = destination.upper()
+
     if not (date[4] == '-' and date[7] == '-' and len(date) == 10):
         raise ValueError('Date must be in YYYY-MM-DD format (iso format).')
 
